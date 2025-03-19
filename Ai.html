@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sciland Project - Insurance</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 80%;
+            max-width: 700px;
+            padding: 30px;
+            border: 5px solid #000; /* Increased border thickness */
+            text-align: center;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+            border-radius: 15px; /* Optional: Adds rounded corners */
+        }
+        
+        .logo-row {
+            display: flex;
+            justify-content: space-between; /* Push logos to left and right */
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 8%;
+            left:0;
+            padding: 0 10%; /* Adjust spacing */
+        }
+        
+        .logo {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+        
+        .left-logo {
+            margin-left:0%;
+        }
+        
+        .right-logo {
+            margin-right: 20%;
+        }
+        
+        .code {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #004085;
+        }
+        .college {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: #004085;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #28a745;
+        }
+        .title-row {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Align vertically */
+            gap: 10px; /* Space between title and year */
+        }
+        
+        .year {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #6c757d;
+        }
+        .subtitle {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #e83e8c;
+        }
+        .divider {
+            border-top: 2px solid #000;
+            margin: 20px 0;
+        }
+        .details {
+            text-align: left;
+            padding: 0 40px;
+        }
+        .detail-row {
+            display: flex;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .detail-label {
+            font-weight: bold;
+            width: 160px;
+            color: #343a40;
+        }
+        .detail-value {
+            flex-grow: 1;
+            color: #007bff;
+        }
+        .team-members {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 0 40px;
+        }
+        .team-members .names {
+            width: 60%;
+            text-align: left;
+            padding-left: 10%;
+            font-size: 18px;
+            font-weight: bold;
+            color: #17a2b8;
+        }
+        .team-members .names div {
+            margin-bottom: 10px;
+        }
+        .team-members .code-section {
+            width: 40%;
+            display: flex;
+            padding-right:10%;
+            padding-bottom: 15%;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 100px;
+            font-weight: bold;
+            color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- College Name -->
+        <div class="college">Aditya Degree College :: Kakinada</div>
+    
+        <div class="logo-row">
+            <div class="logo left-logo">
+                <img src="image1.png" alt="Logo 1" style="width: 100%; height: 100%">
+            </div>
+            <div class="logo right-logo">
+                <img src="image2.png" alt="Logo 2" style="width: 100%; height: 100%">
+            </div>
+        </div>
+    
+        <!-- Project Title -->
+        <div class="title-row">
+            <div class="title">Sciland</div>
+            <div class="year">(2k25)</div>
+        </div>
+    
+        <div class="subtitle">JOHN MCCARTHY CLUB</div> <!-- Updated Club Name -->
+    
+        <!-- Divider -->
+        <div class="divider"></div>
+    
+        <!-- Project Details -->
+        <div class="details">
+            <div class="detail-row">
+                <div class="detail-label">Project Name:</div>
+                <div class="detail-value">Laptop Controller</div> <!-- Updated Project Name -->
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Department:</div>
+                <div class="detail-value">Artificial intelligence Department</div> <!-- Updated Department Name -->
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Project Done By:</div>
+                <br>
+            </div>
+        </div>
+    
+        <!-- Team Members and Code -->
+        <div class="team-members">
+            <div class="names">
+                <div>1. Chakradhar</div> <!-- Updated Team Member Name -->
+            </div>
+            <div class="code-section">
+                C
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
