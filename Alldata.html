@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sciland Projects</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            padding: 30px;
+            margin: 50px;
+            border: 5px solid #000;
+            /* Increased border thickness */
+            text-align: center;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Slightly darker shadow */
+            border-radius: 15px;
+            /* Optional: Adds rounded corners */
+        }
+
+        .logo-row {
+            display: flex;
+            justify-content: space-between;
+            /* Push logos to left and right */
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 8%;
+            left: 0;
+            padding: 0 10%;
+            /* Adjust spacing */
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+
+        .left-logo {
+            margin-left: -4%;
+        }
+
+        .right-logo {
+            margin-right: 16%;
+            background-color: white;
+        }
+
+        .code {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #004085;
+        }
+
+        .college {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: #004085;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #28a745;
+        }
+
+        .title-row {
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Align vertically */
+            gap: 10px;
+            /* Space between title and year */
+        }
+
+        .year {
+            font-size: 18px;
+            margin-bottom: 5px;
+            padding-top: 20px;
+            color: #6c757d;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: bold;
+            padding-right: 5%;
+            margin-bottom: 10px;
+            color: #e83e8c;
+        }
+
+        .divider {
+            border-top: 2px solid #000;
+            margin: 20px 0;
+        }
+
+        .details {
+            text-align: left;
+            padding: 0 40px;
+        }
+
+        .detail-row {
+            display: flex;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            width: 160px;
+            color: #343a40;
+        }
+
+        .detail-value {
+            flex-grow: 1;
+            color: #007bff;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 0 40px;
+        }
+
+        .team-members .names {
+            width: 60%;
+            text-align: left;
+            padding-left: 10%;
+            font-size: 18px;
+            font-weight: bold;
+            color: #17a2b8;
+        }
+
+        .team-members .names div {
+            margin-bottom: 10px;
+        }
+
+        .team-members .code-section {
+            width: 40%;
+            display: flex;
+            padding-right: 10%;
+            padding-bottom: 15%;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 100px;
+            font-weight: bold;
+            color: #004085;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="projects-container"></div>
+    <script>
+       const clubs = [
+  {
+    "club": "SATYA NADELLA CLUB",
+    "department": "Computer Science Department",
+    "projects": [
+      { "name": "ATM Machine", "members": ["Nageswari Adabala", "Divya Jyotula"], "number": "s91" },
+      { "name": "Multi Tic Tac Toe", "members": ["Medidhi Nagadurga", "Chakkapalli Prasanna Mamatha Devi", "Kesineedi Swathi"], "number": "s97" },
+      { "name": "Online Shopping", "members": ["M. Sai Chandana", "S. Kaveri Lakshmi", "P. Sri Srujana"], "number": "s99" },
+      { "name": "Fake News Detection System", "members": ["Dwarampudi Jaya Srinivas Reddy", "Joda Nani Babu", "Pilli Venkata Sai Ramesh", "Allam Venkata Rakesh"], "number": "s95" },
+      { "name": "Call Log Assistant", "members": ["Sheshu Mani Charan Chintalapalli", "Rakesh Ramana Medisetti", "Ravi Venkata Kishore Jamjam", "Kusaraju Ankamreddy"], "number": "s94" },
+      { "name": "Spending Partner", "members": ["T. Naga Jai Veeresh", "Vinay Avala", "Rahul Pulari", "Ajay Matta"], "number": "s101" },
+      { "name": "Bus Reservation System", "members": ["N. Bhagya Lakshmi", "G. Hema Lakshmi Narayana", "G. Durga Malleswari", "G. Saranya Devi"], "number": "s93" },
+      { "name": "Book a Hotel Chatbot", "members": ["Kalli Soma Surendra", "Anukuli Manikanta Swamy", "Surabhathula Krishna Vamsi", "Ithipudi Sai Venkatesh"], "number": "s92" },
+      { "name": "Offline Chatbot", "members": ["Gurram Deva Prasad", "Bogadi Ganesh", "Simusiri Demullu", "Chalapaka Harsha Vardhan"], "number": "s98" },
+      { "name": "Magic Square", "members": ["Abhishek Yalla", "P. Ashok", "V. Rakesh"], "number": "s96" },
+      { "name": "Park N Book", "members": ["D. Sriramsanthosh", "S. Siva Santhosh", "KDS Ram Kalyam"], "number": "s100" }
+    ]
+  },
+  {
+    "club": "PARAFELLA CHADARA ROY",
+    "department": "Chemistry Department",
+    "projects": [
+      { "name": "Paddy Husk Ash Detergent", "members": ["V Sri Harini", "M Sai Akshitha", "K Swarupini"], "number": "s78" },
+      { "name": "Alcohol from Potato and Agricultural Waste", "members": ["G Naga Shiva Gani Krishna", "M Aman"], "number": "s67" },
+      { "name": "Latent Fingerprinting Detection", "members": ["S Bhavana Jagani Sri Sresta", "P Deepika", "K Vasanthi"], "number": "s76" },
+      { "name": "Essential Oils in Perfume Chemistry", "members": ["A Satya", "N Saravi", "P Sri Lakshmi"], "number": "s70" },
+      { "name": "Herbal Tobacco", "members": ["N Satya Sai", "R Bhavani Prasad", "Y Karthik"], "number": "s75" },
+      { "name": "Green Plastic", "members": ["S Lathif", "P Balaji", "M Pattabiram"], "number": "s74" },
+      { "name": "Forensic Chemistry", "members": ["Y Sai Subramanyam", "K Dhana Raju"], "number": "s73" },
+      { "name": "Bio Diesel", "members": ["S Swaroop", "CH Dileep", "B Nikhil"], "number": "s69" },
+      { "name": "Extraction of Natural Toothpaste", "members": ["M Tushar Aditya", "K Vignesh", "Ch Vishnu Teja"], "number": "s72" },
+      { "name": "Rainbow Fire", "members": ["P Sree Vidya", "U Ganga Bhavani"], "number": "s79" },
+      { "name": "Nerolin", "members": ["P Chinna Satya Narayana Raju", "D Tarun Venkata Ganesh", "P Srivinayak"], "number": "s77" },
+      { "name": "Extraction of Caffeine from Tea Dust", "members": ["P Lakshmi Tulasi Saraswathi", "S Jyothika", "Y Devi"], "number": "s71" },
+      { "name": "Analysis of Cold Drinks", "members": ["K Nookaratnam", "S Sri Valli", "M Charishma"], "number": "s68" }
+    ]
+  },
+  {
+    "club": "LUCA PACIOLI CLUB",
+    "department": "Commerce Department",
+    "projects": [
+      { "name": "Monetary Fraud Vault", "members": ["G. Yuvasi", "Ch. Chakri", "A. Sivakumar", "U. Udau"], "number": "s62" },
+      { "name": "AI in the Global Trade Analytics Platform", "members": ["M. Anil Kumar", "M. Nithin Kumar", "M. Sri Ram", "T. Siva Ananda Reddy", "P. Nageswararao"], "number": "s55" },
+      { "name": "Business Guider", "members": ["Md. Yousuf Baba", "G. Gurraju", "Ch. Mukesh", "Ch. Siva Rama Krishna Reddy", "K. Mohan"], "number": "s57" },
+      { "name": "Commerce During Pandemic", "members": ["B. Gagana", "A. Poojitha", "P. Sushmitha", "D. Devi"], "number": "s59" },
+      { "name": "WTO", "members": ["M. Harshitha", "Y. Krishna Kavya", "K. Geethanjali", "G. Sivani"], "number": "s66" },
+      { "name": "All About Commerce", "members": ["Aakarsh Pithani", "V. Kumar", "K. Subramanyam", "P. Usha Kiran Reddy"], "number": "s56" },
+      { "name": "MSMEs", "members": ["K. Sashi Purna", "V. Satya", "P. Sudharani"], "number": "s63" },
+      { "name": "Union Budget 2025-26", "members": ["K. Nitya", "D. Padmasri", "Ch. Swetha", "K. Krissy"], "number": "s65" },
+      { "name": "E-Commerce Platform", "members": ["S. E. S. Varun", "Ch. V. S. Sai Krishna", "T. Rama Krishna", "N. Sivakumar"], "number": "s61" },
+      { "name": "Digital Marketing Strategies", "members": ["S. Nithya Akshaya", "K. Hemalalitha", "T. Tejaswini", "P. Durga Devi"], "number": "s60" },
+      { "name": "Online Stock Investment and Trading", "members": ["S. Gayathri", "P. Vishali", "B. Bhavya", "Ch. Ramya"], "number": "s64" },
+      { "name": "Business Planning and Operations", "members": ["K. Abhi Ram Sai", "N. Anuvardhan Reddy", "Ch. Dalayya Babu", "M. Satya Sai"], "number": "s58" }
+    ]
+  },
+  {
+    "club": "Tachyons Club",
+    "department": "Physics Department",
+    "projects": [
+      { "name": "Producing Electricity from Heat", "members": ["S.N.V.V.S. Santhosh", "P. Arun Sai Varma", "V. Vikas", "A.B.D. Rajesh"], "number": "s110" },
+      { "name": "Black Hole", "members": ["B. Lokesh", "G. Shivamani", "G. Veerendra"], "number": "s104" },
+      { "name": "Automatic Street Light", "members": ["N. Navya", "S. Madhu Latha"], "number": "s102" },
+      { "name": "Cymentrics 2.0", "members": ["O. Madhu Varma", "S.S. Vignesh", "O. Vasu", "K. Sandeep", "O. Deva Kumar"], "number": "s106" },
+      { "name": "Power Transmission System", "members": ["V. Satyaveni", "A. Varshitha", "R.M. Teresa"], "number": "s109" },
+      { "name": "Radar Detector", "members": ["U. Maheshwari", "N. Anjali Devi", "P. Vaishnavi Devi", "T. Yasaswani"], "number": "s111" },
+      { "name": "Carbon Purification for Industries", "members": ["B. Hema Latha", "P. Reethika"], "number": "s105" },
+      { "name": "Mobius Strip by Using 3D Hologram", "members": ["V.M.S.N. Durga Prasad", "S. Poul Kiran", "S.J.D.M. Surendra Varma", "P. Tarun Sai"], "number": "s108" },
+      { "name": "Automatic Toll Gate", "members": ["Ch. Ramya Subhadra", "T. Venkata Durga", "M. Varsha Sri", "S. Harshitha"], "number": "s103" },
+      { "name": "Hydraulic Plane Launcher", "members": ["K. Maha Lakshmi", "K. Eswari Vinaya Lakshmi", "G. Ganga Bhavani", "M. Hima Bindu"], "number": "s107" },
+      { "name": "Solar Boat", "members": ["L. Rakesh", "S. Mahesh", "Y. Sai Santhosh"], "number": "s113" },
+      { "name": "Ruby Laser", "members": ["S. Shiva Narayana", "P. John", "Ch. Bhagavan", "K. Govinda Raju"], "number": "s112" }
+    ]
+  },
+  {
+    "club": "Data Wranglers",
+    "department": "Data Science",
+    "projects": [
+      { "name": "Book Recommendation System", "members": ["A Vara Prasad", "Chandhra Shekar", "Veerendhra"], "number": "s5" },
+      { "name": "Student Mental Health Prediction", "members": ["B Surya Manoj", "D Durga Navadeep", "P Manikanta Swamy"], "number": "s22" },
+      { "name": "Spotify Track Database", "members": ["G Venkata Ramya Sri", "P Lakshmi Harshini", "P Satya Sindhu"], "number": "s21" },
+      { "name": "Diet Recommendation", "members": ["Dileep", "Anil", "Ajay", "Satish"], "number": "s8" },
+      { "name": "Med Fusion", "members": ["G Praveen", "M Prashanth", "P Srinivas"], "number": "s15" },
+      { "name": "Fire Detection", "members": ["V Aruna", "Khwajamoina Shaik", "P Jayalakshmi"], "number": "s12" },
+      { "name": "Escape Room", "members": ["P Haveela", "G Saritha", "K Venkata Lakshmi"], "number": "s10" },
+      { "name": "Youtube Video Summarizer", "members": ["B Tripura", "P Deepika", "B Bindhu", "M Harini"], "number": "s23" },
+      { "name": "Robo Hand", "members": ["G Lokesh", "Ch Vijay", "N Sai Mukesh", "G Durga Prasad"], "number": "s20" },
+      { "name": "Review Scraping", "members": ["G Kalyan", "Ch Gowtham", "N Amar", "D Srinivas"], "number": "s19" },
+      { "name": "Facial Recognition Age and Gender Detection", "members": ["P.V.V. Navya Sri", "M. Venkata Lakshmi", "D Janaki", "G. Dhanushya"], "number": "s11" },
+      { "name": "Electric Car Data Analysis", "members": ["P. Sri Maha Lakshmi", "G. Yamuna Naga Devi", "D. Lipika", "A. Keerthi Sri Ashika"], "number": "s9" },
+      { "name": "Customer Support & FAQ Chatbot for Aditya Degree College", "members": ["S.V.S. Durga Prasad", "K. Chandrasudheer", "G. Srinadh", "P. Karthik Ram"], "number": "s7" },
+      { "name": "Beauty Bliss", "members": ["K.J.V.D.S.S.N. Manvitha", "S. Alekhya Reddy", "K.S.L. Spandana", "M. Meghana"], "number": "s4" },
+      { "name": "ATS Friendly Resumes", "members": ["V. Madhukiran", "V. Durgaprasad", "P. Venu Gopal", "A. Mohan"], "number": "s3" },
+      { "name": "AI Voice Assistant", "members": ["M. Nandini", "P. Shalini", "V.T.S. Bhavani", "P. Kundana"], "number": "s2" },
+      { "name": "Netflix Database using Tableau", "members": ["G Venkata Ramya Sri", "P Lakshmi Harshini", "P Satya Sindhu"], "number": "s16" },
+      { "name": "AI Mock Interview", "members": ["Chelluri Alekhya", "V. Harsha", "Ch. Sujitha", "U. Prasanna"], "number": "s1" },
+      { "name": "Car Price Prediction", "members": ["P. Roshini", "K. Sriya Sanjana", "P. Harsha Vardhini"], "number": "s6" },
+      { "name": "Image Steganography", "members": ["G Swarna Sree", "V Bindhu Madhavi", "N Rajini"], "number": "s13" },
+      { "name": "Mega Mart", "members": ["S. MegaSyam", "D. Srikesh", "K. Sunny", "B. Siddhu Vinayaka Reddy"], "number": "s14" },
+      { "name": "Pyshooter", "members": ["N.M.R. Santosh Kumar", "M. Venkata Rama Teja", "S. Jaya Srinivasa Sujith"], "number": "s18" },
+      { "name": "Plant Disease Prediction", "members": ["S. Naveen", "A. Sai Pavan", "K. Venkat", "P. Surendra"], "number": "s17" }
+    ]
+  },
+  {
+    "club": "Ranalodo Club",
+    "department": "Stat Department",
+    "projects": [
+      { "name": "Are you ready for robotics", "members": ["G. Vijaya", "R. Haritha Devi", "P. Divya", "Sk. Jubeda"], "number": "s81" },
+      { "name": "Survey of Agriculture Statistics", "members": ["P. Naresh Kumar", "N. Durga Prasad", "S. Lokesh", "G. Pavan Kumar"], "number": "s90" },
+      { "name": "Banking vs Net Banking", "members": ["K. Naga Divya", "P. Mahalakshmi", "K. Vyshnavi", "P. Amrutha"], "number": "s82" },
+      { "name": "Business Forecasting", "members": ["K. Ganga Surya Jyothi", "M. Devi", "S. Durga Bhavani", "P. Madhuri"], "number": "s83" },
+      { "name": "Freelancing", "members": ["A.L.S.S. Mounika", "P. Vijyosthna", "D. Lakshmi Prasanna", "D.S.S.S. Bhavana"], "number": "s87" },
+      { "name": "Census of India", "members": ["B. Bhaskar", "D. Divakar", "M. Sai Sri Hari", "M. Sai Prabhu"], "number": "s86" },
+      { "name": "Analysis of Space and Aeronautics", "members": ["K. Teja Subha Sri", "K. Ashritha", "N. Sai Parvathi", "K. Bala Ganga Bhavani"], "number": "s80" },
+      { "name": "Income Tax", "members": ["D. Sowjanya", "G. Sugini", "J. Subha Lakshmi", "P. Venkata Tulasi"], "number": "s88" },
+      { "name": "Caffeine Consumption Trends in India", "members": ["V. Sowmya Sri", "A. Lavanya", "CH. Lakshmi Prasharsha", "YP. Sri Lakshmi"], "number": "s84" },
+      { "name": "Scope of Statistics", "members": ["J. Santhima Sri", "V. Sri", "K. Suhasini", "SH. Vasanthi"], "number": "s89" },
+      { "name": "Casino Game", "members": ["P. Satya Narayana", "K. Pavan Rakesh", "B. Durga Prasad", "K. Jaya Sai"], "number": "s85" }
+    ]
+  }
+];
+
+      
+        const container = document.getElementById("projects-container");
+
+        clubs.forEach(club => {
+            club.projects.forEach(project => {
+                const card = document.createElement("div");
+                card.className = "container";
+                card.innerHTML = `
+            <div class="college">Aditya Degree & PG College (A), Kakinada</div>
+            <div class="logo-row">
+                <div class="logo left-logo">
+                    <img src="image1.png" alt="Logo 1" style="width: 100%; height: 100%">
+                </div>
+                <div class="logo right-logo">
+                    <img src="image2.png" alt="Logo 2" style="width: 100%; height: 100%">
+                </div>
+            </div>
+            <div class="title-row">
+                <div class="title">Sciland</div>
+                <div class="year">(2k25)</div>
+            </div>
+            <div class="subtitle">${club.club}</div>
+            <div class="divider"></div>
+            <div class="details">
+                <div class="detail-row"><div class="detail-label">Project Name:</div><div class="detail-value">${project.name}</div></div>
+                <div class="detail-row"><div class="detail-label">Department:</div><div class="detail-value">${club.department}</div></div>
+                <div class="detail-row"><div class="detail-label">Project Done By:</div></div>
+            </div>
+            <div class="team-members">
+                <div class="names">
+                    ${project.members.map(member => `<div>${member}</div>`).join('')}
+                </div>
+                <div class="code-section">
+                   ${project.number}
+                </div>
+            </div>
+        `;
+                container.appendChild(card);
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
